@@ -1,0 +1,11 @@
+<h2>Items reorder/shuffle animations with Angular2 ngFor</h2>
+    <button (click)="shuffle()">Configure</button>
+    <button (click)="remove()">Remove</button>
+    <button (click)="reset()">Reset</button>
+    <div *ngIf="init">
+    <div class="container" [transition-group]="state">
+      <div *ngFor="let item of items" transition-group-item>
+        {{ item }}
+      </div>
+    </div>
+    </div>
